@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "StoreApp.sln",
+    "git.ignoreLimitWarning": true
+}

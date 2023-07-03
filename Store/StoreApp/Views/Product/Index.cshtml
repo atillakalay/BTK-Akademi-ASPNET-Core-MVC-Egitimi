@@ -1,0 +1,22 @@
+@model IEnumerable<StoreApp.Models.Product> 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    @foreach(var item in Model){
+        <div>
+            <h3>@item.ProductName</h3>
+            <p>@item.Price</p>
+            <p>
+                     <a href="/Product/Get/@item.ProductId">Get Details</a>
+            </p>
+       
+        </div>
+    }
+</body>
+</html>
