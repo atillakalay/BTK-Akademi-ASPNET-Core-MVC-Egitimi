@@ -1,0 +1,16 @@
+@model Product
+
+<div class="col-sm-12 col-md-3 col-lg-4  my-3">
+    <div class="card border-light mb-3" style="max-width: 18rem;">
+        <img src="~/images/default.jpg" alt="">
+        <div class="card-header">@Model.ProductName</div>
+        <div class="card-body">
+            <h5 class="card-title">@string.Format("{0:C}", Model.Price)</h5>
+            <a class="btn btn-primary" asp-action="Get"
+                asp-route-id="@Model.ProductId"><i
+                    class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+                Get
+                Details</a>
+        </div>
+    </div>
+</div>

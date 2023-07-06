@@ -1,17 +1,17 @@
-@model StoreApp.Models.Product 
+@model Product
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>@Model.ProductName</h3>
-    <h3>@Model.Price</h3>
-    <p>
-        <a href="/Product">Go back to Product List</a>
-    </p>
-</body>
-</html>
+@section Header{
+    <div>
+        Header for only get
+    </div>
+}
+
+<div class="btn btn-group">
+    <a class="btn btn-primary" asp-controller="Product" asp-action="Index"><i
+            class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> Go back
+        to Product List</a>
+    <a class="btn btn-outline" asp-controller="Home" asp-action="Index">Home</a>
+</div>
+
+<h3>@Model.ProductName</h3>
+<h3>@Model.Price</h3>
