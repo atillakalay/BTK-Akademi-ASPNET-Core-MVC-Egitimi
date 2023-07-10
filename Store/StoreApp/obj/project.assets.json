@@ -143,18 +143,6 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/_._": {}
-        },
-        "runtime": {
-          "lib/net6.0/_._": {}
-        }
-      },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -560,6 +548,31 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
       }
     }
   },
@@ -692,30 +705,6 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
         "microsoft.entityframeworkcore.sqlite.core.6.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Tools/6.0.0": {
-      "sha512": "m9e6nFnkyRdKcrTFO8rl3ZihCIKrYdECw+fHZVbKz6TBMwKhih/N0sjPnNt0k7sZPvI8izKPkh1d+z4OR2qgXQ==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/6.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/net6.0/_._",
-        "microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
-        "microsoft.entityframeworkcore.tools.nuspec",
-        "tools/EntityFrameworkCore.PS2.psd1",
-        "tools/EntityFrameworkCore.PS2.psm1",
-        "tools/EntityFrameworkCore.psd1",
-        "tools/EntityFrameworkCore.psm1",
-        "tools/about_EntityFrameworkCore.help.txt",
-        "tools/init.ps1",
-        "tools/net461/any/ef.exe",
-        "tools/net461/win-x86/ef.exe",
-        "tools/netcoreapp2.0/any/ef.dll",
-        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
@@ -1244,14 +1233,23 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore >= 6.0.0",
+      "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.0"
+      "Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1261,11 +1259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
       "projectName": "StoreApp",
-      "projectPath": "c:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
+      "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
       "packagesPath": "C:\\Users\\Atilla\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\obj\\",
+      "outputPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1286,7 +1284,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1299,21 +1304,7 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
           "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",

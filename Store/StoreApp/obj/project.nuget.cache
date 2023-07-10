@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "swKeEw/z2nU3xODpIhetmP+Lj31GWjhLwdqn33p14v+QtBi3t/CjUeAYZN7cCCZz14EX+dY5WLWzUOjh6MZd8g==",
+  "dgSpecHash": "hFeyHqjRArjTRAfFfU54MTU/D+TTOHZreHXRem0aRg9GdQOfrPnS1RhpOyaomYfc9l+hDljqMtnsaPu+cwJKDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
   "expectedPackageFiles": [
@@ -13,7 +13,6 @@
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.0\\microsoft.entityframeworkcore.relational.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\6.0.0\\microsoft.entityframeworkcore.sqlite.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\6.0.0\\microsoft.entityframeworkcore.sqlite.core.6.0.0.nupkg.sha512",
-    "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.0\\microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",

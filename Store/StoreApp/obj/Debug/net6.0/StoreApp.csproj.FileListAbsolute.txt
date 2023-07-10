@@ -55,3 +55,7 @@ C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\StoreApp.staticwebassets.runtime.json
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\libman.json
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb

@@ -1,13 +1,13 @@
-@model IEnumerable<Product>
+@model IQueryable<Product>
 
 @section Footer{
     <div>
         Only for Index footer
     </div>
 }
-   <div class="row my-3">
-@foreach (Product item in Model)
-{
+<div class="row my-3">
+    @foreach (Product item in Model)
+    {
         <partial name="_ProductCard" model="@item" />
-}
-   </div>
+    }
+</div>

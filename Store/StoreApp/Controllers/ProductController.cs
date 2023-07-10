@@ -1,28 +1,29 @@
 using Microsoft.AspNetCore.Mvc;
-using StoreApp.Models;
+using Repositories.Contracts;
 
 namespace StoreApp.Controllers
 {
     [Route("[controller]")]
     public class ProductController : Controller
     {
-        private readonly RepositoryContext _repositoryContext;
+        private readonly IRepositoryManager _repositoryManager;
 
-        public ProductController(RepositoryContext repositoryContext)
+        public ProductController(IRepositoryManager repositoryManager)
         {
-            _repositoryContext = repositoryContext;
+            _repositoryManager = repositoryManager;
         }
+
         [HttpGet("")]
         public IActionResult Index()
         {
-            var model = _repositoryContext.Products.ToList();
+            var model = _repositoryManager.Product.GetAllProducts(false);
             return View(model);
         }
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            Product product = _repositoryContext.Products.FirstOrDefault(x => x.ProductId == id);
-            return View(product);
+            var model = _repositoryManager.Product.GetOneProduct(id, false);
+            return View(model);
         }
     }
 }

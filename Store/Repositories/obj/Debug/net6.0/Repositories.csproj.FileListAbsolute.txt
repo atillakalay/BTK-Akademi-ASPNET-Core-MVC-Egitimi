@@ -1,0 +1,15 @@
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\bin\Debug\net6.0\Repositories.deps.json
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\bin\Debug\net6.0\Repositories.dll
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\bin\Debug\net6.0\Repositories.pdb
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\bin\Debug\net6.0\Entities.dll
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\bin\Debug\net6.0\Entities.pdb
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.dll
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\Repositories.pdb
+C:\Users\Atilla\source\repos\MVC\Store\Repositories\obj\Debug\net6.0\ref\Repositories.dll
