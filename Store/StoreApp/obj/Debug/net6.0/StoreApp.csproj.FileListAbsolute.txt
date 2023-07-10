@@ -59,3 +59,5 @@ C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
 C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Services.dll
+C:\Users\Atilla\source\repos\MVC\Store\StoreApp\bin\Debug\net6.0\Services.pdb

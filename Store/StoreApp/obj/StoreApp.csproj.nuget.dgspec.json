@@ -136,6 +136,72 @@
         }
       }
     },
+    "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Atilla\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Atilla\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -170,6 +236,9 @@
               },
               "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj": {
                 "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Repositories\\Repositories.csproj"
+              },
+              "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\Services\\Services.csproj"
               }
             }
           }
