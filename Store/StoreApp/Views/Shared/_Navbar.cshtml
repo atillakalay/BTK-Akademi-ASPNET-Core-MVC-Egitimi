@@ -21,7 +21,7 @@
                     <a class="nav-link" asp-action="Index"
                        asp-controller="Product">
                         <i class="fa-solid fa-list"
-                           style="color: #ffffff;"></i> Products
+                           style="color: #ffffff;"></i> Products (@await Component.InvokeAsync("ProductSummary"))
                     </a>
                 <li class="nav-item">
                     <a class="nav-link" asp-action="Index"
