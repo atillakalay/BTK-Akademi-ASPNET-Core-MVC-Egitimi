@@ -9,11 +9,18 @@ namespace Repositories
         {
         }
 
+        public void CreateProduct(Product product) => Create(product);
+
+
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
         public Product? GetOneProduct(int id, bool trackChanges)
         {
             return FindByCondition(p => p.ProductId == id, trackChanges);
         }
 
+        public void DeleteOneProduct(Product product)
+        {
+            _context.Products.Remove(product);
+        }
     }
 }
