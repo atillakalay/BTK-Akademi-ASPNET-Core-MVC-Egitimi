@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xfP9trtsjfJP5EywkmvB1L16/DsnLCj/5MEptnR1bv64SAX1vTYUK4G1y4cy1oaJJG8kfb8LB4gUCjujNOHOSQ==",
+  "dgSpecHash": "asIqjArgSUW3MiPgO6QKQSU7IKgbQutOm1CQpiT01Yui9cflcVrP60jdS2UBK3lyRjmMmuAY39+kBEM8lR50EA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\StoreApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Atilla\\.nuget\\packages\\automapper\\8.0.0\\automapper.8.0.0.nupkg.sha512",
+    "C:\\Users\\Atilla\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.0.0\\automapper.extensions.microsoft.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -71,6 +73,7 @@
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.codeanalysis.razor\\6.0.0\\microsoft.codeanalysis.razor.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.codeanalysis.scripting.common\\4.0.0\\microsoft.codeanalysis.scripting.common.4.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.0.0\\microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
+    "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.diasymreader\\1.3.0\\microsoft.diasymreader.1.3.0.nupkg.sha512",
     "C:\\Users\\Atilla\\.nuget\\packages\\microsoft.dotnet.scaffolding.shared\\6.0.15\\microsoft.dotnet.scaffolding.shared.6.0.15.nupkg.sha512",

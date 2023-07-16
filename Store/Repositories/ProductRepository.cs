@@ -22,5 +22,9 @@ namespace Repositories
         {
             _context.Products.Remove(product);
         }
+
+        public void UpdateOneProduct(Product product) => Update(product);
+
+
     }
 }

@@ -11,7 +11,7 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20230710133226_init")]
+    [Migration("20230716125807_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,7 @@ namespace StoreApp.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("CategoryName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("CategoryId");
@@ -51,13 +52,20 @@ namespace StoreApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<decimal?>("Price")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ProductName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("ProductId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
 
@@ -65,33 +73,66 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 1,
+                            CategoryId = 2,
                             Price = 17000m,
                             ProductName = "Computer"
                         },
                         new
                         {
                             ProductId = 2,
+                            CategoryId = 2,
                             Price = 1000m,
                             ProductName = "Keyboard"
                         },
                         new
                         {
                             ProductId = 3,
+                            CategoryId = 2,
                             Price = 500m,
                             ProductName = "Mouse"
                         },
                         new
                         {
                             ProductId = 4,
+                            CategoryId = 2,
                             Price = 7000m,
                             ProductName = "Monitor"
                         },
                         new
                         {
                             ProductId = 5,
+                            CategoryId = 2,
                             Price = 1500m,
                             ProductName = "Deck"
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 1,
+                            Price = 52m,
+                            ProductName = "Hamlet"
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            CategoryId = 1,
+                            Price = 75m,
+                            ProductName = "Sefiller"
                         });
+                });
+
+            modelBuilder.Entity("Entities.Models.Product", b =>
+                {
+                    b.HasOne("Entities.Models.Category", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Entities.Models.Category", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

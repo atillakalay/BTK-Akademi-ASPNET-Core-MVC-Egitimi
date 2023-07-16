@@ -14,7 +14,7 @@ namespace StoreApp.Migrations
                 {
                     CategoryId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    CategoryName = table.Column<string>(type: "TEXT", nullable: true)
+                    CategoryName = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,12 +27,18 @@ namespace StoreApp.Migrations
                 {
                     ProductId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    ProductName = table.Column<string>(type: "TEXT", nullable: true),
-                    Price = table.Column<decimal>(type: "TEXT", nullable: true)
+                    ProductName = table.Column<string>(type: "TEXT", nullable: false),
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.ProductId);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId");
                 });
 
             migrationBuilder.InsertData(
@@ -47,37 +53,52 @@ namespace StoreApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Price", "ProductName" },
-                values: new object[] { 1, 17000m, "Computer" });
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 1, 2, 17000m, "Computer" });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Price", "ProductName" },
-                values: new object[] { 2, 1000m, "Keyboard" });
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 2, 2, 1000m, "Keyboard" });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Price", "ProductName" },
-                values: new object[] { 3, 500m, "Mouse" });
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 3, 2, 500m, "Mouse" });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Price", "ProductName" },
-                values: new object[] { 4, 7000m, "Monitor" });
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 4, 2, 7000m, "Monitor" });
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "Price", "ProductName" },
-                values: new object[] { 5, 1500m, "Deck" });
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 5, 2, 1500m, "Deck" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 6, 1, 52m, "Hamlet" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "ProductId", "CategoryId", "Price", "ProductName" },
+                values: new object[] { 7, 1, 75m, "Sefiller" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryId",
+                table: "Products",
+                column: "CategoryId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Categories");
         }
     }
 }
