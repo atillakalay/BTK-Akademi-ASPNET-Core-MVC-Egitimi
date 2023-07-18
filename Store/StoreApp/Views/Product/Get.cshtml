@@ -1,17 +1,31 @@
 @model Product
 
-@section Header{
-    <div>
-        Header for only get
-    </div>
-}
+<div class="row">
+    <div class="col-md-12">
+        <div class="text-center">
+            <h6 class="display-6">
+                @Model.ProductName
+            </h6>
 
-<div class="btn btn-group">
-    <a class="btn btn-primary" asp-controller="Product" asp-action="Index"><i
-            class="fa-solid fa-arrow-left" style="color: #ffffff;"></i> Go back
-        to Product List</a>
-    <a class="btn btn-outline" asp-controller="Home" asp-action="Index">Home</a>
+            <img class="img-fluid shadow rounded-3 my-3" src="@Model?.ImageUrl" alt="@Model.ProductName" />
+
+            <p class="lead text-danger">@string.Format("{0:C}", Model.Price)</p>
+        </div>
+    </div>
+</div>
+<div class="btn-group">
+    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+        <i class="fa-solid fa-house"></i>
+        Home
+    </a>
+    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
+        <i class="fa-solid fa-list"></i>
+        Products
+    </a>
 </div>
 
-<h3>@Model.ProductName</h3>
-<h3>@Model.Price</h3>
+@section Header{
+    <div>
+        Header for only Get
+    </div>
+}

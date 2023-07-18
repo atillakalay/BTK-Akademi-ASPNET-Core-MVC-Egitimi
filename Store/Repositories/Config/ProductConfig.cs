@@ -10,13 +10,13 @@ namespace Repositories.Config
         {
             builder.Property(p => p.ProductName).IsRequired();
             builder.HasData(
-                new Product() { ProductId = 1, CategoryId = 2, ProductName = "Computer", Price = 17_000 },
-                new Product() { ProductId = 2, CategoryId = 2, ProductName = "Keyboard", Price = 1_000 },
-                new Product() { ProductId = 3, CategoryId = 2, ProductName = "Mouse", Price = 500 },
-                new Product() { ProductId = 4, CategoryId = 2, ProductName = "Monitor", Price = 7_000 },
-                new Product() { ProductId = 5, CategoryId = 2, ProductName = "Deck", Price = 1_500 },
-                new Product() { ProductId = 6, CategoryId = 1, ProductName = "Hamlet", Price = 52 },
-                new Product() { ProductId = 7, CategoryId = 1, ProductName = "Sefiller", Price = 75 }
+                new Product() { ProductId = 1, CategoryId = 2, ImageUrl = "/images/1.jpg", ProductName = "Computer", Price = 17_000 },
+                new Product() { ProductId = 2, CategoryId = 2, ImageUrl = "/images/2.jpg", ProductName = "Keyboard", Price = 1_000 },
+                new Product() { ProductId = 3, CategoryId = 2, ImageUrl = "/images/3.jpg", ProductName = "Mouse", Price = 500 },
+                new Product() { ProductId = 4, CategoryId = 2, ImageUrl = "/images/4.jpg", ProductName = "Monitor", Price = 7_000 },
+                new Product() { ProductId = 5, CategoryId = 2, ImageUrl = "/images/5.jpg", ProductName = "Deck", Price = 1_500 },
+                new Product() { ProductId = 6, CategoryId = 1, ImageUrl = "/images/6.jpg", ProductName = "Hamlet", Price = 52 },
+                new Product() { ProductId = 7, CategoryId = 1, ImageUrl = "/images/7.jpg", ProductName = "Sefiller", Price = 75 }
                 );
         }
     }

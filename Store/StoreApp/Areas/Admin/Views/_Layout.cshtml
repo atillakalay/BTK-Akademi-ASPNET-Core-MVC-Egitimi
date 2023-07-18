@@ -13,14 +13,9 @@
 
 <body>
     <header>
-        <partial name="_Navbar" />
-        @await RenderSectionAsync("Header", required: false)
-        @if (Context.Request.RouteValues["area"]?.ToString() == "Admin")
-        {
-            @RenderSection("AdminHeader", required: false)
-        }
+        <partial name="~/Areas/Admin/Views/Shared/_Navbar.cshtml" />
+        @RenderSection("Header",false)
     </header>
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MbG+9+4OmzsMxE881MKFSocZESnc/2gg5/mQUxYrEgE=",
+  "Hash": "sN7tWp6VaJEM7DbkKnoEYAdtT1zEzC6y0iYRU6aL/uk=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -66,6 +66,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\default.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\romeoAndJuliet.jpeg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/romeoAndJuliet.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\romeoAndJuliet.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\sefiller.jpeg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/sefiller.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sefiller.jpeg"
     },
     {
       "Identity": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

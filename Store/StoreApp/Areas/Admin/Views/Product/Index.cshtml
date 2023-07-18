@@ -13,30 +13,34 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Image Url</th>
                 <th>Product Name</th>
                 <th>Price</th>
                 <th>Operations</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (Product product in Model)
+            @foreach (Product prd in Model)
             {
                 <tr>
-                    <td>@product.ProductId</td>
-                    <td>@product.ProductName</td>
-                    <td>@product.Price.ToString()</td>
+                    <td>@prd.ProductId</td>
+                    <td>
+                        <img class="border border-light rounded" src="@prd?.ImageUrl" alt="@prd?.ProductName" width="50" height="70" />
+                    </td>
+                    <td>@prd.ProductName</td>
+                    <td>@prd.Price.ToString()</td>
                     <td>
                         <div class="btn-group">
-                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@product.ProductId">
+                            <a class="btn btn-warning" asp-action="Update" asp-route-id="@prd.ProductId">
                                 <i class="fa fa-edit"></i>
                                 Edit
                             </a>
-                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@product.ProductId">
+                            <a class="btn btn-danger" asp-action="Delete" asp-route-id="@prd.ProductId">
                                 <i class="fa fa-trash"></i>
                                 Delete
                             </a>
                             <a class="btn btn-info" target="_blank" asp-area="" asp-controller="Product" asp-action="Get"
-                               asp-route-id="@product.ProductId">
+                               asp-route-id="@prd.ProductId">
                                 <i class="fa fa-search"></i>
                                 Web
                             </a>

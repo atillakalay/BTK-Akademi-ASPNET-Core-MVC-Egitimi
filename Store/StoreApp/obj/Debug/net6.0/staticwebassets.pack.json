@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\images\\default.jpg"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\romeoAndJuliet.jpeg",
+      "PackagePath": "staticwebassets\\images\\romeoAndJuliet.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\sefiller.jpeg",
+      "PackagePath": "staticwebassets\\images\\sefiller.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

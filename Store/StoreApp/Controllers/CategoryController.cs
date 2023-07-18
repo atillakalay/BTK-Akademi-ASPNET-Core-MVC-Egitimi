@@ -3,10 +3,10 @@ using Services.Contracts;
 
 namespace StoreApp.Controllers
 {
+    [Route("[controller]")]
     public class CategoryController : Controller
     {
         private IServiceManager _manager;
-
 
 
         public IActionResult Index()
