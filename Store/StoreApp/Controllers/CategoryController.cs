@@ -8,6 +8,10 @@ namespace StoreApp.Controllers
     {
         private IServiceManager _manager;
 
+        public CategoryController(IServiceManager manager)
+        {
+            _manager = manager;
+        }
 
         public IActionResult Index()
         {
