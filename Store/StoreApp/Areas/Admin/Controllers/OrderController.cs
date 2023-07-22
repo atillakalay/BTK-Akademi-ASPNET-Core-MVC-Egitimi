@@ -18,6 +18,12 @@ namespace StoreApp.Areas.Admin.Controllers
             var orders = _serviceManager.OrderService.Orders;
             return View(orders);
         }
+        [HttpPost]
+        public IActionResult Complete([FromForm] int id)
+        {
+            _serviceManager.OrderService.Complete(id);
+            return RedirectToAction("Index");
+        }
 
 
     }
