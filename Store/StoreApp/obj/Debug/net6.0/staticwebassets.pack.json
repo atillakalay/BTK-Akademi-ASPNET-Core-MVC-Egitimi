@@ -9,8 +9,24 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer-keyboard.jpg",
+      "PackagePath": "staticwebassets\\images\\computer-keyboard.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer.jpg",
+      "PackagePath": "staticwebassets\\images\\computer.jpg"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpg",
       "PackagePath": "staticwebassets\\images\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\hamlet.jpg",
+      "PackagePath": "staticwebassets\\images\\hamlet.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\mpouse.jpg",
+      "PackagePath": "staticwebassets\\images\\mpouse.jpg"
     },
     {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\romeoAndJuliet.jpeg",

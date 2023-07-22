@@ -12,10 +12,10 @@ namespace StoreApp.Pages
         public Cart Cart { get; set; } // IoC
         public string ReturnUrl { get; set; } = "/";
 
-        public CartModel(IServiceManager manager, Cart cart)
+        public CartModel(IServiceManager manager, Cart cartService)
         {
             _manager = manager;
-            Cart = cart;
+            Cart = cartService;
         }
 
 
@@ -32,9 +32,9 @@ namespace StoreApp.Pages
 
             if (product is not null)
             {
-                Cart.AddItem(product,1);
+                Cart.AddItem(product, 1);
             }
-            return Page(); // returnUrl
+            return RedirectToPage(new { returnUrl = returnUrl });
         }
 
         public IActionResult OnPostRemove(int id, string returnUrl)
