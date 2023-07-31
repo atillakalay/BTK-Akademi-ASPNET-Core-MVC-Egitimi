@@ -1,9 +1,11 @@
 ﻿using Entities.Models;
+using Entities.RequestParameters;
 using Repositories.Contracts;
+using Repositories.Extensions;
 
 namespace Repositories
 {
-    public class ProductRepository : RepositoryBase<Product>, IProductRepository
+    public sealed class ProductRepository : RepositoryBase<Product>, IProductRepository
     {
         public ProductRepository(RepositoryContext context) : base(context)
         {
@@ -25,6 +27,19 @@ namespace Repositories
 
         public void UpdateOneProduct(Product product) => Update(product);
 
+        public IQueryable<Product> GetShowcaseProducts(bool trackChanges)
+        {
+            return FindAll(trackChanges)
+             .Where(p => p.ShowCase.Equals(true));
+        }
 
+        public IQueryable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return _context
+                .Products
+                .FilteredByCategoryId(p.CategoryId)
+                .FilteredBySearchTerm(p.SearchTerm)
+                .FilteredByPrice(p.MinPrice, p.MaxPrice, p.IsValidPrice);
+        }
     }
 }

@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\Bild_Apple_iPhone_14_Pro-3956.jpg",
+      "PackagePath": "staticwebassets\\images\\Bild_Apple_iPhone_14_Pro-3956.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\MonsterA5.png",
+      "PackagePath": "staticwebassets\\images\\MonsterA5.png"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\asus.jpg",
+      "PackagePath": "staticwebassets\\images\\asus.jpg"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer-keyboard.jpg",
       "PackagePath": "staticwebassets\\images\\computer-keyboard.jpg"
     },
@@ -25,6 +37,22 @@
       "PackagePath": "staticwebassets\\images\\hamlet.jpg"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\hamlet.png",
+      "PackagePath": "staticwebassets\\images\\hamlet.png"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\iphone-13-mini.png",
+      "PackagePath": "staticwebassets\\images\\iphone-13-mini.png"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\logtechKeyboard.jpeg",
+      "PackagePath": "staticwebassets\\images\\logtechKeyboard.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\monitor.jpeg",
+      "PackagePath": "staticwebassets\\images\\monitor.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\mpouse.jpg",
       "PackagePath": "staticwebassets\\images\\mpouse.jpg"
     },
@@ -33,8 +61,16 @@
       "PackagePath": "staticwebassets\\images\\romeoAndJuliet.jpeg"
     },
     {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\samsungs20.jpeg",
+      "PackagePath": "staticwebassets\\images\\samsungs20.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\sefiller.jpeg",
       "PackagePath": "staticwebassets\\images\\sefiller.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\images\\sefiller.jpg",
+      "PackagePath": "staticwebassets\\images\\sefiller.jpg"
     },
     {
       "Id": "C:\\Users\\Atilla\\source\\repos\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
