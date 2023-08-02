@@ -5,7 +5,7 @@
     <div class="text-center display-6">
         Cart
     </div>
-    <table class="table table-hover">
+    <table>
         <thead>
             <tr>
                 <th>Product</th>
@@ -21,8 +21,8 @@
                 <tr>
                     <td>@line.Product.ProductName</td>
                     <td>@line.Quantity</td>
-                    <td>@line.Product.Price.ToString()</td>
-                    <td>@((line.Product.Price * line.Quantity).ToString())</td>
+                    <td>@String.Format("{0:C}", line.Product.Price)</td>
+                    <td>@string.Format("{0:c2}", line.Product.Price * line.Quantity)</td>
                     <td>
                         <form method="post" asp-page-handler="Remove">
                             <input type="hidden" name="id" value="@line.Product.ProductId" />
@@ -46,7 +46,7 @@
         </tfoot>
     </table>
     <div class="text-center my-3">
-        <div class="btn btn-group">
+        <div class="btn-group">
             <a class="btn btn-primary" href="@Model?.ReturnUrl">Continue Shopping</a>
             <a class="btn btn-primary mx-2" asp-action="Checkout" asp-controller="Order">Checkout</a>
         </div>

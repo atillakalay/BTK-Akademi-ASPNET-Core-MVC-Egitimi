@@ -29,14 +29,15 @@
                 <li class="list-group-item d-flex justify-content-between brand">
                     @cartItem.Product.ProductName
                     <b>
-                        @cartItem.Quantity * @cartItem.Product.Price.ToString()
-                        = @((cartItem.Quantity * cartItem.Product.Price).ToString())
+                        @string.Format("{0:C2}", cartItem.Quantity * cartItem.Product.Price)
+                        = string.Format("{0:C2}", cartItem.Quantity * cartItem.Product.Price)
+
                     </b>
                 </li>
             }
             <li class="list-group-item d-flex justify-content-between text-danger">
                 Total
-                <b>@total.ToString()</b>
+                <b>@string.Format("{0:C2}", total)</b>
             </li>
         </ul>
         <div class="text-center mt-2 p-2">

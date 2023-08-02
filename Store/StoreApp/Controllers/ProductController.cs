@@ -1,10 +1,10 @@
 using Entities.RequestParameters;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
+using StoreApp.Models;
 
 namespace StoreApp.Controllers
 {
-    [Route("[controller]")]
     public class ProductController : Controller
     {
         private readonly IServiceManager _manager;
@@ -14,16 +14,27 @@ namespace StoreApp.Controllers
             _manager = manager;
         }
 
-        [HttpGet("")]
-        public IActionResult Index(ProductRequestParameters productRequestParameters)
+        public IActionResult Index(ProductRequestParameters requestParameters)
         {
-            var model = _manager.ProductService.GetAllProductsWithDetails(productRequestParameters);
-            return View(model);
+            var requestParametersProducts = _manager.ProductService.GetAllProductsWithDetails(requestParameters);
+            var totalCount = _manager.ProductService.GetAllProducts(trackChanges: false).Count();
+            var requestParametersagination = new Pagination
+            {
+                CurrenPage = requestParameters.PageNumber,
+                ItemsPerPage = requestParameters.PageSize,
+                TotalItems = totalCount
+            };
+            var viewModel = new ProductListViewModel
+            {
+                Products = requestParametersProducts,
+                Pagination = requestParametersagination
+            };
+            return View(viewModel);
         }
-        [HttpGet("{id}")]
+
         public IActionResult Get([FromRoute(Name = "id")] int id)
         {
-            var model = _manager.ProductService.GetOneProduct(id, false);
+            var model = _manager.ProductService.GetOneProduct(id, trackChanges: false);
             return View(model);
         }
     }

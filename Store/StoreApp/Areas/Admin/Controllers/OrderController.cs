@@ -6,25 +6,24 @@ namespace StoreApp.Areas.Admin.Controllers
     [Area("Admin")]
     public class OrderController : Controller
     {
-        private readonly IServiceManager _serviceManager;
+        private readonly IServiceManager _manager;
 
-        public OrderController(IServiceManager serviceManager)
+        public OrderController(IServiceManager manager)
         {
-            _serviceManager = serviceManager;
+            _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var orders = _serviceManager.OrderService.Orders;
+            var orders = _manager.OrderService.Orders;
             return View(orders);
         }
+
         [HttpPost]
         public IActionResult Complete([FromForm] int id)
         {
-            _serviceManager.OrderService.Complete(id);
+            _manager.OrderService.Complete(id);
             return RedirectToAction("Index");
         }
-
-
     }
 }

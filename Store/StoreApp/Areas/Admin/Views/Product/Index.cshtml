@@ -25,10 +25,10 @@
                 <tr>
                     <td>@prd.ProductId</td>
                     <td>
-                        <img class="border border-light rounded" src="@prd?.ImageUrl" alt="@prd?.ProductName" width="50" height="70" />
+                        <img class="border border-light rounded" src="@prd?.ImageUrl" alt="@prd?.ProductName" width="50" />
                     </td>
                     <td>@prd.ProductName</td>
-                    <td>@prd.Price.ToString()</td>
+                    <td>@string.Format("{0:C}", prd.Price)</td>
                     <td>
                         <div class="btn-group">
                             <a class="btn btn-warning" asp-action="Update" asp-route-id="@prd.ProductId">

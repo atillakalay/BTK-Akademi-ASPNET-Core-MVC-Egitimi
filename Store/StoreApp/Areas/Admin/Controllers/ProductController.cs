@@ -10,16 +10,9 @@ namespace StoreApp.Areas.Admin.Controllers
     {
         private readonly IServiceManager _manager;
 
-        public ProductController(IServiceManager manager)
-        {
-            _manager = manager;
-        }
+        public ProductController(IServiceManager manager) => _manager = manager;
 
-        public IActionResult Index()
-        {
-            var model = _manager.ProductService.GetAllProducts(false);
-            return View(model);
-        }
+        public IActionResult Index() => View(_manager.ProductService.GetAllProducts(false));
 
         public IActionResult Create()
         {
@@ -27,32 +20,24 @@ namespace StoreApp.Areas.Admin.Controllers
             return View();
         }
 
-        private SelectList GetCategoriesSelectList()
-        {
-            return new SelectList(_manager.CategoryService.GetAllCategories(false),
-            "CategoryId",
-            "CategoryName", "1");
-        }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([FromForm] ProductDtoForInsertion productDto, IFormFile file)
+        public async Task<IActionResult> Create([FromForm] ProductDtoForInsertion dto, IFormFile file)
         {
             if (ModelState.IsValid)
             {
-                //file operation
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
-
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
                 using (var stream = new FileStream(path, FileMode.Create))
-                {
                     await file.CopyToAsync(stream);
-                }
-                productDto.ImageUrl = String.Concat("/images/", file.FileName);
-                _manager.ProductService.CreateProduct(productDto);
-                return RedirectToAction("Index");
+
+                dto.ImageUrl = $"/images/{file.FileName}";
+                _manager.ProductService.CreateProduct(dto);
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
+
+        private SelectList GetCategoriesSelectList() => new SelectList(_manager.CategoryService.GetAllCategories(false), "CategoryId", "CategoryName", "1");
 
         public IActionResult Update([FromRoute(Name = "id")] int id)
         {
@@ -63,19 +48,17 @@ namespace StoreApp.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update([FromForm] ProductDtoForUpdate productDto, IFormFile file)
+        public async Task<IActionResult> Update([FromForm] ProductDtoForUpdate dto, IFormFile file)
         {
             if (ModelState.IsValid)
             {
-                string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
-
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", file.FileName);
                 using (var stream = new FileStream(path, FileMode.Create))
-                {
                     await file.CopyToAsync(stream);
-                }
-                productDto.ImageUrl = String.Concat("/images/", file.FileName);
-                _manager.ProductService.UpdateOneProduct(productDto);
-                return RedirectToAction("Index");
+
+                dto.ImageUrl = $"/images/{file.FileName}";
+                _manager.ProductService.UpdateOneProduct(dto);
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
@@ -84,7 +67,7 @@ namespace StoreApp.Areas.Admin.Controllers
         public IActionResult Delete([FromRoute(Name = "id")] int id)
         {
             _manager.ProductService.DeleteOneProduct(id);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

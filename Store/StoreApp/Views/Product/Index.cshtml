@@ -1,16 +1,22 @@
-@model IQueryable<Product>
+@model ProductListViewModel
 
 <div class="row">
     <div class="col-md-3">
         @await Component.InvokeAsync("CategoriesMenu")
         @await Component.InvokeAsync("ProductFilterMenu")
+        <div products="" number="3"></div>
     </div>
     <div class="col-md-9">
         <div class="row my-3">
-            @foreach (Product prd in Model)
+            @foreach (Product prd in Model.Products)
             {
                 <partial name="_ProductCard" model="@prd" />
             }
+        </div>
+        <div class="text-center">
+            <div page-model="@Model?.Pagination" page-action="Index" page-classes-enabled="true" page-class="btn"
+                 page-class-normal="btn-outline-dark" page-class-selected="btn-secondary" class="btn-group">
+            </div>
         </div>
     </div>
 </div>
@@ -21,3 +27,5 @@
         Only for Index footer
     </div>
 }
+
+
